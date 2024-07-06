@@ -1,5 +1,9 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from transformers import T5Tokenizer, T5ForConditionalGeneration
-from ..models.model import initialize_model  # Adjusted import for relative path
+from models.model import initialize_model
 
 def summarize(text, model, tokenizer):
     inputs = tokenizer(text, return_tensors="pt", max_length=512, truncation=True)
@@ -7,7 +11,7 @@ def summarize(text, model, tokenizer):
     return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 
 if __name__ == "__main__":
-    tokenizer, model = initialize_model()  # Initialize the model and tokenizer
+    tokenizer, model = initialize_model()
     text = "Your document text here."
     summary = summarize(text, model, tokenizer)
     print(summary)
