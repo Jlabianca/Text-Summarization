@@ -1,6 +1,14 @@
 # Text Summarization Project
 
-This project implements a transformer-based model for text summarization using the CNN/Daily Mail or XSum dataset. The models used include BERTSUM and T5.
+The Text Summarization Project uses transformer-based models to generate summaries for long texts, such as articles. This project specifically utilizes the T5 (Text-to-Text Transfer Transformer) model, which is designed to handle various text generation tasks, including summarization.
+
+## The project involves several key steps:
+
+1. Data Loading and Preprocessing: Loading the CNN/Daily Mail dataset and preparing it for training.
+2. Model Initialization: Setting up the T5 model and tokenizer.
+3. Training the Model: Training the model on the dataset to learn how to generate summaries.
+4. Evaluating the Model: Evaluating the model's performance using metrics like ROUGE.
+5. Inference: Generating summaries for new, unseen articles.
 
 ## Setup
 
