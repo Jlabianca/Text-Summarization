@@ -20,6 +20,7 @@ The Text Summarization Project uses transformer-based models to generate summari
      pandas
      numpy
      matplotlib
+     wordcloud
    ```
 
 2. Clone the repository:
