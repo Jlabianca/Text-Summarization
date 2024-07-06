@@ -1,6 +1,12 @@
 from datasets import load_dataset
 
 def load_and_preprocess_dataset():
+    """
+    Load and preprocess the CNN/Daily Mail dataset.
+
+    Returns:
+    - tokenized_dataset (Dataset): Tokenized dataset ready for model training.
+    """
     dataset = load_dataset("cnn_dailymail", "3.0.0")
 
     def preprocess_function(examples):
